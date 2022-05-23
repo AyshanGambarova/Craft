@@ -1,0 +1,91 @@
+﻿@model RegisterViewModel
+<section id="about-us" style=" background-image: url(img/about.svg);">
+    <div class="container">
+        <div class="row  align-items-center justify-content-center text-center">
+            <div class="col-lg-6">
+                <div class="text">
+                    <h1>Sign Up</h1>
+                    <a href="index.html">Home</a> <i class="bi bi-chevron-right"></i> <a href="sign-up.html">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="sign-up">
+    <div class="container">
+        <div class="row  justify-content-center text-center">
+            <div class="col-lg-6">
+                <div class="form">
+                    <div class="form-inner">
+                        <div class="header">
+                            <h3>Sign Up Now</h3>
+                            <p>Use the form below to create your account.</p>
+                        </div>
+                        <div class="sign-google mb-5">
+                            <p class="mt-5">Sign up with your work email</p>
+                            <div>
+                                <a href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp"
+                                   class="google-btn">
+                                    <img src="https://demo.graygrids.com/themes/craft/assets/images/account-login/google.png">
+                                    <span class="ms-3">Sign Up With Google</span>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hrdivider">
+                            <hr />
+                            <span>Or</span>
+                        </div>
+                        <form method="post">
+                            <div class="form-required">
+                                <div class="row">
+                                    <div class="col-lg-6 position-relative mb-4">
+                                        <input class="form-control" placeholder="Name" asp-for="Name" required>
+                                        <span class="small text-danger" asp-validation-for="Name"></span>
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="col-lg-6 position-relative mb-4">
+                                        <input class="form-control" placeholder="Surname" asp-for="Surname" required>
+                                        <span class="small text-danger" asp-validation-for="Surname"></span>
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="col-lg-6 position-relative mb-4">
+                                        <input class="form-control" placeholder="Username" asp-for="UserName" required>
+                                        <span class="small text-danger" asp-validation-for="UserName"></span>
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="col-lg-6 position-relative mb-4">
+                                        <input class="form-control" placeholder="Your email" required asp-for="Email">
+                                        <span class="small text-danger" asp-validation-for="Email"></span>
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="col-lg-12 position-relative mb-4">
+                                        <input class="form-control" placeholder="Your password" required asp-for="Password">
+                                        <span class="small text-danger" asp-validation-for="Password"></span>
+                                        <i class="bi bi-lock"></i>
+                                    </div>
+                                    <div class="col-lg-12 position-relative mb-5">
+                                        <input class="form-control" placeholder="Confirm password" required asp-for="PasswordConfirm">
+                                        <span class="small text-danger" asp-validation-for="PasswordConfirm"></span>
+                                        <i class="bi bi-lock"></i>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button class="custom-btn w-100" type="submit">Register!</button>
+                                    </div>
+                                    <h4 class="create-account mt-5">
+                                        Already have an account? <a asp-controller="account" asp-action="login">
+                                            Sign
+                                            In
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
